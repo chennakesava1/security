@@ -1,0 +1,100 @@
+Windows Registry Editor Version 5.00
+
+;; Windows Updates "https://github.com/vFense/vFenseAgent-win/wiki/Registry-keys-for-configuring-Automatic-Updates-&-WSUS"
+
+;;Disable Automatic Updates
+[HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\WindowsUpdate\AU]
+"NoAutoUpdate"=dword:00000001
+;;Disables access to Windows Update
+[HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\WindowsUpdate]
+"DisableWindowsUpdateAccess"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SYSTEM\Internet Communication Management\Internet Communication]
+"DisableWindowsUpdateAccess"=dword:00000000
+;;Disabled or not configured. Users can connect to the Windows Update website
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer]
+"NoWindowsUpdate"=dword:00000000
+;;'need to check
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\safer\codeidentifiers]
+"authenticodeenabled"=dword:00000000
+"DefaultLevel"=dword:00040000
+"TransparentEnabled"=dword:00000001
+"PolicyScope"=dword:00000000
+"ExecutableTypes"=hex(7):41,00,44,00,45,00,00,00,41,00,44,00,50,00,00,00,42,00,\
+  41,00,53,00,00,00,42,00,41,00,54,00,00,00,43,00,48,00,4d,00,00,00,43,00,4d,\
+  00,44,00,00,00,43,00,4f,00,4d,00,00,00,43,00,50,00,4c,00,00,00,43,00,52,00,\
+  54,00,00,00,45,00,58,00,45,00,00,00,48,00,4c,00,50,00,00,00,48,00,54,00,41,\
+  00,00,00,49,00,4e,00,46,00,00,00,49,00,4e,00,53,00,00,00,49,00,53,00,50,00,\
+  00,00,4c,00,4e,00,4b,00,00,00,4d,00,44,00,42,00,00,00,4d,00,44,00,45,00,00,\
+  00,4d,00,53,00,43,00,00,00,4d,00,53,00,49,00,00,00,4d,00,53,00,50,00,00,00,\
+  4d,00,53,00,54,00,00,00,4f,00,43,00,58,00,00,00,50,00,43,00,44,00,00,00,50,\
+  00,49,00,46,00,00,00,52,00,45,00,47,00,00,00,53,00,43,00,52,00,00,00,53,00,\
+  48,00,53,00,00,00,55,00,52,00,4c,00,00,00,56,00,42,00,00,00,57,00,53,00,43,\
+  00,00,00,00,00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\safer\codeidentifiers\0]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\safer\codeidentifiers\0\Paths]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\safer\codeidentifiers\0\Paths\{1c83a7d7-0bd2-4a83-b6c6-cef21193b075}]
+"LastModified"=hex(b):7e,b2,d3,71,0e,1d,cd,01
+"Description"=""
+"SaferFlags"=dword:00000000
+"ItemData"="C:\\Windows\\System32\\lpksetup.exe"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\safer\codeidentifiers\0\Paths\{50e50121-9cd8-43e0-b436-bad9efab2d25}]
+"LastModified"=hex(b):d8,24,2f,f6,77,1a,cd,01
+"Description"=""
+"SaferFlags"=dword:00000000
+"ItemData"="C:\\Program Files (x86)\\Internet Explorer\\iexplore.exe"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\safer\codeidentifiers\0\Paths\{87440d14-ff53-4bd2-965f-331a65c2e4a9}]
+"LastModified"=hex(b):28,cd,52,17,78,1a,cd,01
+"Description"=""
+"SaferFlags"=dword:00000000
+"ItemData"="C:\\Windows\\System32\\msdt.exe"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\safer\codeidentifiers\0\Paths\{9749d82d-1918-4dcd-b36f-183f9b4390ea}]
+"LastModified"=hex(b):af,c7,d2,db,77,1a,cd,01
+"Description"=""
+"SaferFlags"=dword:00000000
+"ItemData"="C:\\Windows\\HelpPane.exe"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\safer\codeidentifiers\0\Paths\{a20a1619-c95b-4fc4-a293-be1ff26afd34}]
+"LastModified"=hex(b):66,56,d7,d2,77,1a,cd,01
+"Description"=""
+"SaferFlags"=dword:00000000
+"ItemData"="C:\\Windows\\hh.exe"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\safer\codeidentifiers\0\Paths\{eb87db07-7c7f-4b14-bab9-e5895d4985da}]
+"LastModified"=hex(b):1d,f6,3e,e8,77,1a,cd,01
+"Description"=""
+"SaferFlags"=dword:00000000
+"ItemData"="C:\\Windows\\winhlp32.exe"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\safer\codeidentifiers\262144]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\safer\codeidentifiers\262144\Paths]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\safer\codeidentifiers\262144\Paths\{191cd7fa-f240-4a17-8986-94d480a6c8ca}]
+"LastModified"=hex(b):66,4c,f6,c7,77,1a,cd,01
+"Description"=""
+"SaferFlags"=dword:00000000
+"ItemData"=hex(2):25,00,48,00,4b,00,45,00,59,00,5f,00,4c,00,4f,00,43,00,41,00,\
+  4c,00,5f,00,4d,00,41,00,43,00,48,00,49,00,4e,00,45,00,5c,00,53,00,4f,00,46,\
+  00,54,00,57,00,41,00,52,00,45,00,5c,00,4d,00,69,00,63,00,72,00,6f,00,73,00,\
+  6f,00,66,00,74,00,5c,00,57,00,69,00,6e,00,64,00,6f,00,77,00,73,00,20,00,4e,\
+  00,54,00,5c,00,43,00,75,00,72,00,72,00,65,00,6e,00,74,00,56,00,65,00,72,00,\
+  73,00,69,00,6f,00,6e,00,5c,00,53,00,79,00,73,00,74,00,65,00,6d,00,52,00,6f,\
+  00,6f,00,74,00,25,00,00,00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\safer\codeidentifiers\262144\Paths\{d2c34ab2-529a-46b2-b293-fc853fce72ea}]
+"LastModified"=hex(b):66,4c,f6,c7,77,1a,cd,01
+"Description"=""
+"SaferFlags"=dword:00000000
+"ItemData"=hex(2):25,00,48,00,4b,00,45,00,59,00,5f,00,4c,00,4f,00,43,00,41,00,\
+  4c,00,5f,00,4d,00,41,00,43,00,48,00,49,00,4e,00,45,00,5c,00,53,00,4f,00,46,\
+  00,54,00,57,00,41,00,52,00,45,00,5c,00,4d,00,69,00,63,00,72,00,6f,00,73,00,\
+  6f,00,66,00,74,00,5c,00,57,00,69,00,6e,00,64,00,6f,00,77,00,73,00,5c,00,43,\
+  00,75,00,72,00,72,00,65,00,6e,00,74,00,56,00,65,00,72,00,73,00,69,00,6f,00,\
+  6e,00,5c,00,50,00,72,00,6f,00,67,00,72,00,61,00,6d,00,00,00
